@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <!-- Include the Tailwind CSS stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <style>
+
+body {
+    background: url('giff.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: background-animation 20s infinite;
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: center center;
+    }
+    25% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center center;
+    }
+    75% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+        body {
+            background-color: black;
+        }
+        .calculator {
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+        }
+        .calculator-display {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: right;
+            color: #2D2D2D;
+            background-color: #E0E0E0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+        .calculator-buttons {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        .calculator-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: gray;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .calculator-button:hover {
+            background-color: #555555;
+        }
+        .calculator-button:active {
+            transform: scale(0.95);
+        }
+        .calculator-button-clear {
+            background-color: #BDBDBD;
+        }
+        .calculator-button-clear:hover {
+            background-color: #C9C9C9;
+        }
+        .calculator-button-clear:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="calculator-display" disabled>
+        <div class="calculator-buttons">
+            <button class="calculator-button">7</button>
+            <button class="calculator-button">8</button>
+            <button class="calculator-button">9</button>
+            <button class="calculator-button">/</button>
+            <button class="calculator-button">4</button>
+            <button class="calculator-button">5</button>
+            <button class="calculator-button">6</button>
+            <button class="calculator-button">*</button>
+            <button class="calculator-button">1</button>
+            <button class="calculator-button">2</button>
+            <button class="calculator-button">3</button>
+            <button class="calculator-button">-</button>
+            <button class="calculator-button">0</button>
+            <button class="calculator-button">.</button>
+            <button class="calculator-button">=</button>
+            <button class="calculator-button">+</button>
+            <button class="calculator-button-clear">C</button>
+        </div>
+    </div>
+     <script src="script.js"></script>
+</body>
+</body>
+</html>
